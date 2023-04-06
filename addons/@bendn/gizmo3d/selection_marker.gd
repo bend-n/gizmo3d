@@ -1,0 +1,2 @@
+extends Gizmo
+class_name SelectionMarker

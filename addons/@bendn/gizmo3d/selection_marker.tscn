@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Material" uid="uid://boc66segplbdg" path="res://addons/@bendn/gizmo3d/center.tres" id="1_sojt7"]
+[ext_resource type="Script" path="res://addons/@bendn/gizmo3d/selection_marker.gd" id="2_gai3n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8slg5"]
+size = Vector3(10, 10, 10)
+
+[node name="selection marker" type="MeshInstance3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_8slg5")
+surface_material_override/0 = ExtResource("1_sojt7")
+script = ExtResource("2_gai3n")

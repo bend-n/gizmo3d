@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqcjdbse5n5lb"]
+
+[ext_resource type="Script" path="res://addons/@bendn/gizmo3d/gizmo.gd" id="1_ocjut"]
+[ext_resource type="Script" path="res://addons/@bendn/gizmo3d/translate/handle.gd" id="2_dbfpj"]
+[ext_resource type="CylinderMesh" uid="uid://lc08lgqf086" path="res://addons/@bendn/gizmo3d/scale/cylinder.tres" id="3_15ibc"]
+[ext_resource type="Material" uid="uid://dc4qnnjootkhu" path="res://addons/@bendn/gizmo3d/y.tres" id="4_cm82e"]
+[ext_resource type="BoxMesh" uid="uid://dqf33w5edcobv" path="res://addons/@bendn/gizmo3d/scale/box.tres" id="5_dsdp5"]
+[ext_resource type="Shape3D" uid="uid://k6i72vyyvx5a" path="res://addons/@bendn/gizmo3d/translate/translate_arm.shape" id="6_d5tgp"]
+[ext_resource type="Material" uid="uid://do26tijfu1ibj" path="res://addons/@bendn/gizmo3d/x.tres" id="7_n5pes"]
+[ext_resource type="Material" uid="uid://btbrwby3db6t5" path="res://addons/@bendn/gizmo3d/z.tres" id="8_pk3gt"]
+[ext_resource type="Material" uid="uid://boc66segplbdg" path="res://addons/@bendn/gizmo3d/center.tres" id="9_ka3tc"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qsd58"]
+radius = 1.0
+height = 2.0
+radial_segments = 16
+rings = 8
+
+[node name="scale" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+script = ExtResource("1_ocjut")
+
+[node name="handle_y" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 10, 0)
+collision_layer = 1073741824
+collision_mask = 0
+script = ExtResource("2_dbfpj")
+dir = 2
+mode = 1
+
+[node name="cylinder" type="MeshInstance3D" parent="handle_y"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.31134e-07, 3)
+mesh = ExtResource("3_15ibc")
+surface_material_override/0 = ExtResource("4_cm82e")
+
+[node name="point" type="MeshInstance3D" parent="handle_y"]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, -2.84217e-14, -5)
+mesh = ExtResource("5_dsdp5")
+surface_material_override/0 = ExtResource("4_cm82e")
+
+[node name="collider" type="CollisionShape3D" parent="handle_y"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.37114e-08, 1)
+visible = false
+shape = ExtResource("6_d5tgp")
+
+[node name="handle_x" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 0)
+collision_layer = 1073741824
+collision_mask = 0
+script = ExtResource("2_dbfpj")
+dir = 0
+mode = 1
+
+[node name="cylinder" type="MeshInstance3D" parent="handle_x"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.31134e-07, 0, -3)
+mesh = ExtResource("3_15ibc")
+surface_material_override/0 = ExtResource("7_n5pes")
+
+[node name="point" type="MeshInstance3D" parent="handle_x"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.84217e-14, 0, 5)
+mesh = ExtResource("5_dsdp5")
+surface_material_override/0 = ExtResource("7_n5pes")
+
+[node name="collider" type="CollisionShape3D" parent="handle_x"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37114e-08, 0, -1)
+visible = false
+shape = ExtResource("6_d5tgp")
+
+[node name="handle_z" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+collision_layer = 1073741824
+collision_mask = 0
+script = ExtResource("2_dbfpj")
+dir = 1
+mode = 1
+
+[node name="cylinder" type="MeshInstance3D" parent="handle_z"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -3)
+mesh = ExtResource("3_15ibc")
+surface_material_override/0 = ExtResource("8_pk3gt")
+
+[node name="point" type="MeshInstance3D" parent="handle_z"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 5)
+mesh = ExtResource("5_dsdp5")
+surface_material_override/0 = ExtResource("8_pk3gt")
+
+[node name="collider" type="CollisionShape3D" parent="handle_z"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+visible = false
+shape = ExtResource("6_d5tgp")
+
+[node name="center" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_qsd58")
+surface_material_override/0 = ExtResource("9_ka3tc")

@@ -1,0 +1,25 @@
+{
+  "name": "@bendn/gizmo3d",
+  "version": "1.0.2",
+  "description": "small addon for gizmo creation",
+  "main": "gizmo.gd",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bend-n/gizmo3d.git"
+  },
+  "keywords": [
+    "godot",
+    "godot-engine",
+    "3d",
+    "gizmo"
+  ],
+  "author": "bendn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bend-n/gizmo3d/issues"
+  },
+  "homepage": "https://github.com/bend-n/gizmo3d#readme"
+}
