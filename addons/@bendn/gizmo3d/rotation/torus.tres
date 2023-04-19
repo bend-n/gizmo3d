@@ -1,6 +1,9 @@
-[gd_resource type="TorusMesh" format=3 uid="uid://bw6rig250ekqw"]
+[gd_resource type="TorusMesh" load_steps=2 format=3 uid="uid://bw6rig250ekqw"]
+
+[ext_resource type="Material" uid="uid://boc66segplbdg" path="res://addons/@bendn/gizmo3d/center.tres" id="1_yovum"]
 
 [resource]
+material = ExtResource("1_yovum")
 inner_radius = 14.0
 outer_radius = 15.0
 ring_segments = 8

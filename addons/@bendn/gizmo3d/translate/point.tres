@@ -1,6 +1,9 @@
-[gd_resource type="CylinderMesh" format=3 uid="uid://cd0844dj635dv"]
+[gd_resource type="CylinderMesh" load_steps=2 format=3 uid="uid://cd0844dj635dv"]
+
+[ext_resource type="Material" uid="uid://boc66segplbdg" path="res://addons/@bendn/gizmo3d/center.tres" id="1_l0oix"]
 
 [resource]
+material = ExtResource("1_l0oix")
 top_radius = 0.0
 bottom_radius = 2.0
 height = 3.0

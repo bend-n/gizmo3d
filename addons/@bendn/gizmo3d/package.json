@@ -1,6 +1,6 @@
 {
   "name": "@bendn/gizmo3d",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "small addon for gizmo creation",
   "main": "gizmo.gd",
   "scripts": {

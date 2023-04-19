@@ -25,6 +25,7 @@ unicode = 82
 events = [SubResource("InputEventKey_gor3q")]
 
 [node name="rotation" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 script = ExtResource("1_7laj6")
 rotate_cw = SubResource("Shortcut_jvc8g")
 rotate_ccw = SubResource("Shortcut_0sfr4")

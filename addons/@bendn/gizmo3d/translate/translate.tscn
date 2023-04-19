@@ -12,6 +12,7 @@
 [ext_resource type="Material" uid="uid://btbrwby3db6t5" path="res://addons/@bendn/gizmo3d/z.tres" id="10_4d87b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rttof"]
+material = ExtResource("3_t3mv1")
 size = Vector3(10, 10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tep2a"]
@@ -29,7 +30,6 @@ script = ExtResource("2_vs4q7")
 [node name="mesh" type="MeshInstance3D" parent="center"]
 mesh = SubResource("BoxMesh_rttof")
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("3_t3mv1")
 
 [node name="collider" type="CollisionShape3D" parent="center"]
 shape = SubResource("BoxShape3D_tep2a")
