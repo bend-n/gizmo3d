@@ -4,6 +4,6 @@
 
 [resource]
 material = ExtResource("1_yovum")
-inner_radius = 14.0
-outer_radius = 15.0
+inner_radius = 13.0
+outer_radius = 16.0
 ring_segments = 8
